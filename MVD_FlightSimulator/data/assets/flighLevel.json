@@ -1,0 +1,112 @@
+{
+  "scene": "test 1",
+  "directory": "data/assets/",
+  "geometries": [
+    {
+      "name": "plane_10x20",
+      "file": "plane_10x20.obj"
+    },
+    {
+      "name": "plane_40x40",
+      "file": "plane_40x40.obj"
+    },
+    {
+      "name": "FPS_gun",
+      "file": "gun.obj"
+    },
+    {
+      "name": "Box",
+      "file": "crate_1x1x1.obj"
+    },
+    {
+      "name": "Cat",
+      "file": "cat.obj"
+    }
+  ],
+  "textures": [
+    {"name": "blue", "file": "block_blue.tga"},
+    {"name": "purple", "file": "block_purple.tga"},
+    {"name": "teal", "file": "block_teal.tga"},
+    {"name": "gun", "file": "SubmachineGun_diff_1024.tga"}
+  ],
+  "shaders": [
+    {"name": "phong", "vertex": "data/shaders/phong.vert", "fragment": "data/shaders/phong.frag"}
+  ],
+  "materials": [
+    {"name": "blue", "shader": "phong", "diffuse_texture":"blue"},
+    {"name": "purple", "shader": "phong", "diffuse_texture":"purple"},
+    {"name": "teal", "shader": "phong", "diffuse_texture":"teal"},
+    {"name": "gun", "shader": "phong", "diffuse_texture":"gun", "ambient": [3.5, 3.5, 3.5]}
+  ],
+  "lights": [
+    {
+      "name": "Light 1",
+      "position": [100,100,-100],
+      "color": [1,1,1]
+    }
+  ],
+  "entities": [
+    {
+      "name": "Box",
+      "geometry": "Box",
+      "material": "purple",
+      "transform": {
+        "translate": [ 50, 2, 0 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 5, 20, 80 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [ 0.6, 0.6, 0.6 ]
+      }
+    }
+    ,
+    {
+      "name": "Box",
+      "geometry": "Box",
+      "material": "purple",
+      "transform": {
+        "translate": [ -50, 2, 0 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 5, 20, 80 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [0.6,0.6,0.6]
+      }
+    },
+    {
+      "name": "Box",
+      "geometry": "Box",
+      "material": "purple",
+      "transform": {
+        "translate": [ 0, 2, 50 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 80, 20, 5 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [0.6,0.6,0.6]
+      }
+    },
+    {
+      "name": "Box",
+      "geometry": "Box",
+      "material": "purple",
+      "transform": {
+        "translate": [ 0, 2, -50 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 80, 20, 5 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [0.6,0.6,0.6]
+      }
+    }
+
+  ]
+}
